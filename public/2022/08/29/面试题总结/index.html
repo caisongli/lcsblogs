@@ -1,0 +1,750 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="html 部分1. 　 DOCTYPE 　有什么作用？告诉浏览器使用哪个版本的 HTML 规范来渲染文档。DOCTYPE 不存在或形式不正确会导致 HTML 文档以混杂模式呈现。 2.页面导入样式时，使用 link 和 @import 有什么区别？link 引用 CSS 时候，页面载入时同时加载； @import 需要在页面完全加载以后加载，而且@import 被引用的 CSS 会等到引用它的CS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端学习笔记">
+<meta property="og:url" content="http://example.com/2022/08/29/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="郦先森">
+<meta property="og:description" content="html 部分1. 　 DOCTYPE 　有什么作用？告诉浏览器使用哪个版本的 HTML 规范来渲染文档。DOCTYPE 不存在或形式不正确会导致 HTML 文档以混杂模式呈现。 2.页面导入样式时，使用 link 和 @import 有什么区别？link 引用 CSS 时候，页面载入时同时加载； @import 需要在页面完全加载以后加载，而且@import 被引用的 CSS 会等到引用它的CS">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/LL/AppData/Roaming/Typora/typora-user-images/image-20220806111527552.png">
+<meta property="og:image" content="c:/Users/LL/AppData/Roaming/Typora/typora-user-images/image-20220806111425650.png">
+<meta property="og:image" content="c:/Users/LL/AppData/Roaming/Typora/typora-user-images/image-20220806113745742.png">
+<meta property="article:published_time" content="2022-08-29T08:52:35.774Z">
+<meta property="article:modified_time" content="2022-08-29T09:03:27.645Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:/Users/LL/AppData/Roaming/Typora/typora-user-images/image-20220806111527552.png">
+  
+  
+  
+  <title>前端学习笔记 - 郦先森</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="前端学习笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-29 16:52" pubdate>
+          2022年8月29日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          13k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          105 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">前端学习笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="html-部分"><a href="#html-部分" class="headerlink" title="html 部分"></a>html 部分</h2><h3 id="1-DOCTYPE-有什么作用？"><a href="#1-DOCTYPE-有什么作用？" class="headerlink" title="1. 　 DOCTYPE 　有什么作用？"></a>1. 　 DOCTYPE 　有什么作用？</h3><p><font color='orange'>告诉浏览器使用哪个版本的 <code>HTML</code> 规范来渲染文档。<code>DOCTYPE</code> 不存在或形式不正确会导致 HTML 文档以混杂模式呈现。</font></p>
+<h3 id="2-页面导入样式时，使用-link-和-import-有什么区别？"><a href="#2-页面导入样式时，使用-link-和-import-有什么区别？" class="headerlink" title="2.页面导入样式时，使用 link 和 @import 有什么区别？"></a>2.页面导入样式时，使用 <code>link</code> 和 <code>@import</code> 有什么区别？</h3><p><font color='orange'><code>link</code> 引用 <code>CSS</code> 时候，页面载入时同时加载；</font></p>
+<p><font color='orange'><code>@import</code> 需要在页面完全加载以后加载，而且<code>@import</code> 被引用的 <code>CSS</code> 会等到引用它的<code>CSS</code> 文件被加载完才加载</font></p>
+<h3 id="3-请写出-HTML-块元素标签、行内元素标签、空-void-元素有那些？"><a href="#3-请写出-HTML-块元素标签、行内元素标签、空-void-元素有那些？" class="headerlink" title="3.请写出 HTML 块元素标签、行内元素标签、空(void)元素有那些？"></a>3.请写出 HTML 块元素标签、行内元素标签、空(void)元素有那些？</h3><ul>
+<li><input disabled="" type="checkbox"> 块级元素标签： 　<font color='orange'> <code>div</code> <code>p</code> <code>ul</code> <code>li</code> <code>table</code> <code>h1</code> … <code>h6</code> <code>form</code></font> 等</li>
+<li><input disabled="" type="checkbox"> 行内元素标签： 　<font color='orange'>span<code> </code>a<code> </code>i<code> </code>label<code> </code>img<code> </code>input<code> </code>button<code> </code>textarea<code> </code>select</font> 等</li>
+<li><input disabled="" type="checkbox"> 空(<code>void</code>)元素： 　<font color='orange'>br<code> </code><hr><code> </code><link><code> </code><meta></font> 等</li>
+</ul>
+<h3 id="4-HTML5-的文件离线储存怎么使用？"><a href="#4-HTML5-的文件离线储存怎么使用？" class="headerlink" title="4.HTML5 的文件离线储存怎么使用？"></a>4.HTML5 的文件离线储存怎么使用？</h3><p>在页面头部加入 <code>manifest</code> 属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">manifest</span>=<span class="hljs-string">&quot;cache.manifest&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="5-SVG-与-Canvas"><a href="#5-SVG-与-Canvas" class="headerlink" title="5. SVG 与 Canvas"></a>5. SVG 与 Canvas</h3><p><strong>SVG 表示（scalable vector graphics）可缩放矢量图形。Canvas 画布</strong></p>
+<p><font color='orange'><strong>SVG</strong>：通过使用 SVG 绘制的任意形状都可以被记住和操作，并且浏览器可以再次渲染它<br><strong>Canvas</strong>:画布则是绘制然后遗忘。一旦绘制完成，你就不能访问和处理像素。</font></p>
+<h3 id="6-请用-html-知识解决-seo-优化问题？"><a href="#6-请用-html-知识解决-seo-优化问题？" class="headerlink" title="6.请用 html 知识解决 seo 优化问题？"></a>6.请用 html 知识解决 seo 优化问题？</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;html对SEO的优化&quot;</span> /&gt;</span>/*不推荐用这个*/<br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;keywords&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;SEO,爬虫，搜索引擎、百度、html优化&quot;</span> /&gt;</span><br>增加关键词搜索<br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span></span><br><span class="hljs-tag">  <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;description&quot;</span></span><br><span class="hljs-tag">  <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;通过html标签及属性的使用提高网站被爬虫爬取的几率，使用户百度时网站尽量排在前面，提高用户的点击率&quot;</span></span><br><span class="hljs-tag">/&gt;</span><br>添加描述<br></code></pre></td></tr></table></figure>
+
+<h3 id="7-常用浏览器有哪些，内核都是什么，内核的理解？"><a href="#7-常用浏览器有哪些，内核都是什么，内核的理解？" class="headerlink" title="7.常用浏览器有哪些，内核都是什么，内核的理解？"></a>7.常用浏览器有哪些，内核都是什么，内核的理解？</h3><p>常用浏览器有 IE 火狐(firefox) chrome safari 360 搜狗 等</p>
+<ul>
+<li>IE 的是 Trident</li>
+<li>火狐的是 Gecko</li>
+<li><font color='orange'>chrome 和 safari 用的是 Webkit</font></li>
+<li>360 和搜狗这些分极速模式和兼容模式，极速模式用的 Webkit 的内核，兼容模式用的 Trident 内核</li>
+</ul>
+<p><strong><font color='orange'>浏览器内核主要分成两部分：渲染引擎(<code>Layout Engine</code>或<code>Rendering Engine</code>) 和 JS 引擎。</font></strong></p>
+<h3 id="8-渐进增强-progressive-enhancement-和优雅降级-graceful-degradation-的区别"><a href="#8-渐进增强-progressive-enhancement-和优雅降级-graceful-degradation-的区别" class="headerlink" title="8.渐进增强 (progressive enhancement) 和优雅降级 (graceful degradation) 的区别?"></a>8.渐进增强 (progressive enhancement) 和优雅降级 (graceful degradation) 的区别?</h3><ul>
+<li>渐进增强: 先保证低版本浏览器的基本功能，再去兼容高版本浏览器效果和交互。</li>
+<li>优雅降级: 先保证高版本浏览器的效果和交互等，再去兼容低版本的浏览器。</li>
+</ul>
+<h3 id="9-什么是-FOUC（文档样式短暂失效）"><a href="#9-什么是-FOUC（文档样式短暂失效）" class="headerlink" title="9.什么是 FOUC（文档样式短暂失效）?"></a>9.什么是 FOUC（文档样式短暂失效）?</h3><ul>
+<li>原理：当样式表晚于结构性 html 加载，当加载到此样式表时，页面将停止之前的渲染。此样式表被下载和解析后，将重新渲染页面，也就出现了短暂的花屏现象。( <font color='orange'>使用<code>@import</code> 方法导入样式表</font>)</li>
+<li>解决方法：使用 <code>link</code> 标签加载 CSS 样式文件。因为 <code>link</code> 是顺序加载的，这样页面会等到 CSS 下载完之后再下载 HTML 文件，这样先布局好，就不会出现 <code>FOUC</code> 问题。</li>
+</ul>
+<h3 id="10-Cookie，sessionStorage-和-localStorage-的区别？"><a href="#10-Cookie，sessionStorage-和-localStorage-的区别？" class="headerlink" title="10.Cookie，sessionStorage 和 localStorage 的区别？"></a>10.<code>Cookie</code>，<code>sessionStorage</code> 和 <code>localStorage</code> 的区别？</h3><p><font color='orange'>共同点：都是保存在浏览器端，且是同源的。</font></p>
+<p><font color='orange'>存储位置不同：cookie 在浏览器和服务器间来回传递，而 <code>sessionStorage</code> 和 <code>localStorage</code> 不会自动把数据发给服务器，仅在本地保存。</font></p>
+<p><font color='orange'>存储大小的限制不同：<code>cookie</code> 保存的数据很小，不能超过 4k，而 <code>sessionStorage</code> 和<code>localStorage</code> 保存的数据大，可达到 5M。</font></p>
+<p><font color='orange'>数据的有效期不同：<code>cookie</code> 在设置的 <code>cookie</code> 过期时间之前一直有效，即使窗口或者浏览器关闭。<code>sessionStorage</code> 仅在浏览器窗口关闭之前有效。<code>localStorage</code> 始终有效，窗口和浏览器关闭也一直保存，用作长久数据保存。</font></p>
+<p><font color='orange'>作用域不同：<code>cookie</code> 在所有的同源窗口都是共享；<code>sessionStorage</code> 不在不同的浏览器共享，即使同一页面；<code>localStorage</code> 在所有同源窗口都是共享。</font></p>
+<h2 id="indexedDB-介绍"><a href="#indexedDB-介绍" class="headerlink" title="indexedDB 介绍"></a>indexedDB 介绍</h2><p><code>indexedDB</code> 是一个前端数据持久化解决方案（即前端缓存），由浏览器实现。</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs">1.存储量大，理论上不封顶<br>2.同源策略是一样的<br>3.多数api采用的都是异步的方式，防止数据量大的时候阻塞其他的一些操作<br>4.通过对象仓库存储的方式<br>5.存储的类型比较丰富<br>6.能够为数据建立索引，提供查找性能<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-number">1.</span>对象仓库，在indexedDB中是没有表的概念的，而是objectStore，一个数据库中可以包含多个objectStore，它是一个灵活的数据结构可以存放多种类型数据，里面储存的每条数据都和一个键相关联。键值可以指定也可以用数字递增也可以不指定但存储的类型会有差异。<br><br><span class="hljs-number">2.</span>事务性， 每次操作数据库都必须创建一个事务，<span class="hljs-number">2</span>个参数（表名，是否可读写） db.<span class="hljs-title function_">transaction</span>(storeName, ‘readwrite’)<br><br><span class="hljs-number">3.</span>基于请求，异步，indexedDB打开数据库，新建表等都是基于请求的，是一种异步的处理方式，必须在他回调函数中处理<br></code></pre></td></tr></table></figure>
+
+<h3 id="11-如何实现浏览器内多个标签页之间的通信"><a href="#11-如何实现浏览器内多个标签页之间的通信" class="headerlink" title="11.如何实现浏览器内多个标签页之间的通信?"></a>11.如何实现浏览器内多个标签页之间的通信?</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"> / <span class="hljs-title class_">WebSocket</span>、<span class="hljs-title class_">SharedWorker</span><br><br><span class="hljs-comment">//可以调用 localstorge、cookie 等本地存储方式。localstorge 在另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，我们通过监听事件，控制它的值来进行页面信息通信。</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="12-什么是渐进式渲染？"><a href="#12-什么是渐进式渲染？" class="headerlink" title="12.什么是渐进式渲染？"></a>12.什么是渐进式渲染？</h3><ul>
+<li><p><font color='orange'>渐进式渲染是用于提高网页性能（尤其是提高用户感知的加载速度），以尽快呈现页面的技术。</font></p>
+</li>
+<li><p><font color='orange'>在以前互联网带宽较小的时期，这种技术更为普遍。如今，移动终端的盛行，而移动网络往往不稳定，渐进式渲染在现代前端开发中仍然有用武之地。</font></p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">比如：<br><span class="hljs-comment">//（1）图片懒加载——页面上的图片不会一次性全部加载。当用户滚动页面到图片部分时，JavaScript将加载并显示图像。</span><br><span class="hljs-comment">//（2）确定显示内容的优先级（分层次渲染）——为了尽快将页面呈现给用户，页面只包含基本的最少量的CSS、脚本和内容，然后可以使用延迟加载脚本或监听DOMContentLoaded/load事件加载其他资源和内容。</span><br><span class="hljs-string">&#x27;（3）异步加载HTML片段——当页面通过后台渲染时，把HTML拆分，通过异步请求，分块发送给浏览器。</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="css3-部分"><a href="#css3-部分" class="headerlink" title="css3 部分"></a>css3 部分</h2><h3 id="1-CSS3-有哪些新特性？"><a href="#1-CSS3-有哪些新特性？" class="headerlink" title="1. CSS3 有哪些新特性？"></a>1. CSS3 有哪些新特性？</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs jade">RGBA 和 透明度<br>background-image background-origin(content-box/padding-box/border-box) background-size background-repeat<br>word-wrap（对长的不可分割单词换行）word-wrap：break-word<br>文字阴影：text-shadow： 5px 5px 5px #FF0000;（水平阴影，垂直阴影，模糊距离，阴影颜色）<br>font-face 属性：定义自己的字体<br>圆角（边框半径）：border-radius 属性用于创建圆角<br>边框图片：border-image: url(border.png) 30 30 round<br>盒阴影：box-shadow: 10px 10px 5px #888888<br>媒体查询：定义两套css，当浏览器的尺寸变化时会采用不同的属性<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-解释一下-Flexbox-弹性盒布局模型-？及适用场景？"><a href="#2-解释一下-Flexbox-弹性盒布局模型-？及适用场景？" class="headerlink" title="2.解释一下 Flexbox (弹性盒布局模型)？及适用场景？"></a>2.解释一下 <code>Flexbox</code> (弹性盒布局模型)？及适用场景？</h3><ul>
+<li><font color='orange'>一个容器默认有两条轴，一个是水平的主轴，一个是与主轴垂直的交叉轴。</font></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css">属性：<br><span class="hljs-attribute">flex-direction</span> 定义主轴的方向；<br><span class="hljs-attribute">flex-wrap</span> 定义是否换行；<br><span class="hljs-attribute">flex-flow</span> 上述<span class="hljs-number">2</span>个属性的简写；<br><span class="hljs-attribute">justify-content</span> 定义项目在主轴上的对齐方式；<br><span class="hljs-attribute">align-items</span> 定义项目在交叉轴上如何对齐；<br><span class="hljs-attribute">align-content</span> 定义多根轴线的对齐方式<br></code></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\LL\AppData\Roaming\Typora\typora-user-images\image-20220806111527552.png" srcset="/img/loading.gif" lazyload alt="image-20220806111527552"></p>
+<h3 id="3-CSS3-新增伪类有那些"><a href="#3-CSS3-新增伪类有那些" class="headerlink" title="3.CSS3 新增伪类有那些?"></a>3.CSS3 新增伪类有那些?</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-string">&#x27;p:first-of-type 选择属于其父元素的首个元素</span><br><span class="hljs-string">&#x27;</span><span class="hljs-attr">p</span>:last-<span class="hljs-keyword">of</span>-type 选择属于其父元素的最后元素<br><span class="hljs-string">&#x27;p:only-of-type 选择属于其父元素唯一的元素</span><br><span class="hljs-string">//p:only-child 选择属于其父元素的唯一子元素</span><br><span class="hljs-string">//p:nth-child(2) 选择属于其父元素的第二个子元素</span><br><span class="hljs-string">:enabled :disabled 表单控件的禁用状态。</span><br><span class="hljs-string">:checked 单选框或复选框被选中。</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-为什么要清除浮动？清除浮动的方式"><a href="#4-为什么要清除浮动？清除浮动的方式" class="headerlink" title="4.为什么要清除浮动？清除浮动的方式"></a>4.为什么要清除浮动？清除浮动的方式</h3><ul>
+<li><font color='orange'>清除浮动是为了清除使用浮动元素产生的影响：浮动的元素，高度会塌陷，而高度的塌陷使我们页面后面的布局不能正常显示。</font></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-number">1</span><span class="hljs-comment">/* 万能清除浮动代码*/</span>  <span class="hljs-number">2</span> <span class="hljs-comment">/*在结尾处添加空div标签 clear:both*/</span>  <span class="hljs-number">3</span><span class="hljs-comment">/*父级div定义height*/</span> <span class="hljs-number">4</span> <span class="hljs-comment">/*父级div定义 overflow:hidden 或 overflow:auto*/</span><br><span class="hljs-comment">//.clearfloat:after&#123;</span><br>	<span class="hljs-attr">display</span>:block;<br>	<span class="hljs-attr">clear</span>:both;<br>	<span class="hljs-attr">content</span>:<span class="hljs-string">&quot;&quot;</span>;<br>	<span class="hljs-attr">visibility</span>:hidden;<br>	<span class="hljs-attr">height</span>:<span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">//.clearfloat&#123;</span><br>	<span class="hljs-attr">zoom</span>:<span class="hljs-number">1</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="5-before-和-after-中双冒号和单冒号有什么区别？解释一下这-2-个伪元素的作用"><a href="#5-before-和-after-中双冒号和单冒号有什么区别？解释一下这-2-个伪元素的作用" class="headerlink" title="5.::before 和 :after 中双冒号和单冒号有什么区别？解释一下这 2 个伪元素的作用"></a>5.<code>::before</code> 和 <code>:after</code> 中双冒号和单冒号有什么区别？解释一下这 2 个伪元素的作用</h3><ul>
+<li><p>单冒号( <code>:</code> )用于 CSS3 伪类，双冒号( <code>::</code> )用于 CSS3 伪元素。</p>
+</li>
+<li><p><code>::before</code> 就是以一个子元素的存在，定义在元素主体内容之前的一个伪元素。并不存在于<code>dom</code>之中，只存在于页面之中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//:before 和 :after 这两个伪元素，是在 CSS2.1 里新出现的。起初，伪元素的前缀使用的是单冒号语法，但随着Web的进化，在CSS3的规范里，伪元素的语法被修改成使用双冒号，成为 ::before ::after。</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="6-让页面里的字体变清晰，变细用-CSS-怎么做？"><a href="#6-让页面里的字体变清晰，变细用-CSS-怎么做？" class="headerlink" title="6.让页面里的字体变清晰，变细用 CSS 怎么做？"></a>6.让页面里的字体变清晰，变细用 CSS 怎么做？</h3><ol>
+<li><strong><code>-webkit-font-smoothing</code> 在 window 系统下没有起作用，但是在 IOS 设备上起作用</strong></li>
+<li><strong><code>-webkit-font-smoothing：antialiased</code> 是最佳的，灰度平滑。</strong></li>
+</ol>
+<h3 id="7-如果需要手动写动画，你认为最小时间间隔是多久，为什么？"><a href="#7-如果需要手动写动画，你认为最小时间间隔是多久，为什么？" class="headerlink" title="7.如果需要手动写动画，你认为最小时间间隔是多久，为什么？"></a>7.如果需要手动写动画，你认为最小时间间隔是多久，为什么？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//多数显示器默认频率是 60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms。</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="8-什么是响应式设计？响应式设计的基本原理是什么？"><a href="#8-什么是响应式设计？响应式设计的基本原理是什么？" class="headerlink" title="8.什么是响应式设计？响应式设计的基本原理是什么？"></a>8.什么是响应式设计？响应式设计的基本原理是什么？</h3><p><font color='orange'>响应式网站设计(Responsive Web design)是一个网站能够兼容多个终端，而不是为每一个终端做一个特定的版本。</font></p>
+<p><font color='orange'>基本原理是通过<strong>媒体查询 <code>@media</code> 检测不同的设备屏幕尺寸做处理</strong>。</font></p>
+<p><img src="C:\Users\LL\AppData\Roaming\Typora\typora-user-images\image-20220806111425650.png" srcset="/img/loading.gif" lazyload alt="image-20220806111425650"></p>
+<h3 id="9-Sass、Less-是什么？大家为什么要使用他们？"><a href="#9-Sass、Less-是什么？大家为什么要使用他们？" class="headerlink" title="9.Sass、Less 是什么？大家为什么要使用他们？"></a><code>9.Sass</code>、<code>Less</code> 是什么？大家为什么要使用他们？</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript">/他们是<span class="hljs-variable constant_">CSS</span>预处理器。是<span class="hljs-variable constant_">CSS</span>上的一种抽象层。它们是一种特殊的语法、语言编译成<span class="hljs-variable constant_">CSS</span>。<br><br><span class="hljs-string">&#x27; Less 是一种动态样式语言。将CSS赋予了动态语言的特性，如变量，继承，运算，函数。Less即可以在客户端上运行（支持IE6+,Webkit,Firefox），也可以在服务端运行（借助Node.js）。</span><br><span class="hljs-string">//Sass 变量必须是 $ 开始，而 Less 变量必须使用 @ 符号开始。</span><br><span class="hljs-string">为什么要使用它们？</span><br><span class="hljs-string"></span><br><span class="hljs-string">//结构清晰，便于扩展。</span><br><span class="hljs-string">//可以方便地屏蔽浏览器私有语法差异。（这个不用多说，封装对浏览器语法差异的重复处理，减少无异议的机械劳动。）</span><br><span class="hljs-string">//可以轻松实现多重继承。</span><br><span class="hljs-string">//完全兼容CSS代码，可以方便地应用到老项目中。Less 只是在CSS语法上做了扩展，所以老的CSS代码也可以与 Less 代码一同编译。</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="10-display-inline-block-什么时候会显示间隙？"><a href="#10-display-inline-block-什么时候会显示间隙？" class="headerlink" title="10.display:inline-block 什么时候会显示间隙？"></a>10.<code>display:inline-block</code> 什么时候会显示间隙？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//有空格时候会有间隙——解决：移除空格</span><br><span class="hljs-comment">//margin 正值的时候——解决：margin使用负值</span><br><span class="hljs-comment">//使用 font-size 时候——解决：font-size:0、letter-spacing、word-spacing</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="11-浏览器是怎样解析-CSS-选择器的？"><a href="#11-浏览器是怎样解析-CSS-选择器的？" class="headerlink" title="11.浏览器是怎样解析 CSS 选择器的？"></a>11.浏览器是怎样解析 CSS 选择器的？</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript">/<span class="hljs-variable constant_">CSS</span>选择器的解析是从右向左解析的。<br><br><span class="hljs-string">&#x27;若从左向右的匹配，发现不符合规则，需要进行回溯，会损失很多性能。</span><br><span class="hljs-string">//若从右向左匹配，先找到所有的最右节点，对于每一个节点，向上寻找其父节点直到找到根元素或满足条件的匹配规则，则结束这个分支的遍历。</span><br><span class="hljs-string">&#x27;</span>两种匹配规则的性能差别很大，是因为从右向左的匹配在第一步就筛选掉了大量的不符合条件的最右节点（叶子节点），而从左向右的匹配规则的性能都浪费在了失败的查找上面。<br><span class="hljs-comment">//而在 CSS 解析完毕后，需要将解析的结果与 DOM Tree 的内容一起进行分析建立一棵 Render Tree，最终用来进行绘图。在建立 Render Tree 时（WebKit 中的Attachment过程），浏览器就要为每个 DOM Tree 中的元素根据 CSS 的解析结果（Style Rules）来确定生成怎样的 Render Tree。</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="12-CSS-优化、提高性能的方法有哪些？"><a href="#12-CSS-优化、提高性能的方法有哪些？" class="headerlink" title="12. CSS 优化、提高性能的方法有哪些？"></a>12. CSS 优化、提高性能的方法有哪些？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-string">&#x27;避免过度约束</span><br><span class="hljs-string">&#x27;</span>避免后代选择符<br><span class="hljs-string">&#x27;避免链式选择符</span><br><span class="hljs-string">&#x27;</span>使用紧凑的语法<br><span class="hljs-string">&#x27;避免不必要的命名空间</span><br><span class="hljs-string">&#x27;</span>避免不必要的重复<br><span class="hljs-string">&#x27;最好使用表示语义的名字。一个好的类名应该是描述他是什么而不是像什么</span><br><span class="hljs-string">&#x27;</span>避免 !important，可以选择其他选择器<br><span class="hljs-string">&#x27;尽可能的精简规则，你可以合并不同类里的重复规则</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="13-阐述一下-CSS-Sprites（雪碧图）"><a href="#13-阐述一下-CSS-Sprites（雪碧图）" class="headerlink" title="13.阐述一下 CSS Sprites（雪碧图）"></a>13.阐述一下 CSS Sprites（雪碧图）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//将一个页面涉及到的所有图片都包含到一张大图中去，然后利用CSS的 background-image，background- repeat，background-position 的组合进行背景定位。</span><br><span class="hljs-comment">//利用CSS Sprites能很好地减少网页的http请求，从而大大的提高页面的性能；CSS Sprites能减少图片的字节。</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="14-移动端的布局用过媒体查询吗？"><a href="#14-移动端的布局用过媒体查询吗？" class="headerlink" title="14.移动端的布局用过媒体查询吗？"></a>14.移动端的布局用过媒体查询吗？</h3><p><strong>通过媒体查询可以为不同大小和尺寸的媒体定义不同的 css，适应相应的设备的显示</strong>。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>  里边引入： <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">”stylesheet”</span> <span class="hljs-attr">type</span>=<span class="hljs-string">”text/css”</span> <span class="hljs-attr">href</span>=<span class="hljs-string">”xxx.css”</span> <span class="hljs-attr">media</span>=<span class="hljs-string">”only</span></span><br><span class="hljs-tag">  <span class="hljs-attr">screen</span> <span class="hljs-attr">and</span> (<span class="hljs-attr">max-device-width:480px</span>)”&gt;</span> 1 CSS中定义： @media only screen and<br>  (max-device-width:480px) &#123; /* css样式 */ &#125;<br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="15-上下-margin-重合的问题"><a href="#15-上下-margin-重合的问题" class="headerlink" title="15.上下 margin 重合的问题?"></a>15.上下 <code>margin</code> 重合的问题?</h3><p><font color='orange'><strong>在重合元素外包裹一层容器，通过改变此<code>div</code>的属性使两个盒子分属于两个不同的<code>BFC</code>，以此来阻止<code>margin</code>重叠。</strong></font></p>
+<p><img src="C:\Users\LL\AppData\Roaming\Typora\typora-user-images\image-20220806113745742.png" srcset="/img/loading.gif" lazyload alt="image-20220806113745742"></p>
+<h2 id="js-部分"><a href="#js-部分" class="headerlink" title="js 部分"></a>js 部分</h2><h3 id="1、0-1-0-2-0-3-？为什么？false"><a href="#1、0-1-0-2-0-3-？为什么？false" class="headerlink" title="1、0.1 + 0.2 === 0.3 ？为什么？false"></a>1、0.1 + 0.2 === 0.3 ？为什么？false</h3><p><font color='orae'><strong>精度丢失可能出现在进制转换和对阶运算中</strong></font></p>
+<p><font color='orange'>在两数相加时，会先转换成二进制，0.1 和 0.2 转换成二进制的时候尾数会发生无限循环，然后进行对阶运算，JS 引擎对二进制进行截断，所以造成精度丢失。</font></p>
+<h3 id="2、JS-数据类型"><a href="#2、JS-数据类型" class="headerlink" title="2、JS 数据类型"></a>2、JS 数据类型</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//基本类型：Number、Boolean、String、null、undefined、symbol（ES6 新增的），BigInt（ES2020）</span><br><br><span class="hljs-comment">//引用类型：Object，对象子类型（Array，Function）</span><br><br><span class="hljs-string">&#x27;扩展：symbol 有什么用处？</span><br><span class="hljs-string"></span><br><span class="hljs-string">//可以用来表示一个独一无二的变量防止命名冲突。</span><br><span class="hljs-string">还可以利用 symbol 不会被常规的方法（除了 Object.getOwnPropertySymbols 外）遍历到，所以可以用来模拟私有变量。</span><br><span class="hljs-string">//主要用来提供遍历接口，布置了 symbol.iterator 的对象才可以使用 for···of 循环，可以统一处理数据结构。调用之后回返回一个遍历器对象，包含有一个 next 方法，使用 next 方法后有两个返回值 value 和 done 分别表示函数当前执行位置的值和是否遍历完毕。</span><br><span class="hljs-string">Symbol.for() 可以在全局访问 symbol</span><br><span class="hljs-string"></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3、如何判断-JS-数据类型"><a href="#3、如何判断-JS-数据类型" class="headerlink" title="3、如何判断 JS 数据类型"></a>3、如何判断 JS 数据类型</h3><p>一、<strong>typeof</strong> 【检测除 null 外的基本类型 返回字符串 】</p>
+<p><font color='orange'> <strong>typeof  返回一个表示数据类型的字符串，返回结果包括：number、string、boolean、object、undefined、function。typeof 可以对基本类型 number、string、boolean、undefined 做出准确的判断（null 除外，typeof null === “object”）；而对于引用类型，除了 function 之外返回的都是 object。但当我们需要知道某个对象的具体类型时，typeof 就显得有些力不从心了。</strong></font></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">typeof</span> <span class="hljs-number">1</span>; 	<span class="hljs-comment">// number 有效</span><br><span class="hljs-keyword">typeof</span> ‘ ’;	<span class="hljs-comment">// string 有效</span><br><span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// boolean 有效</span><br><span class="hljs-keyword">typeof</span> <span class="hljs-literal">undefined</span>; <span class="hljs-comment">// undefined 有效</span><br><span class="hljs-keyword">typeof</span> <span class="hljs-literal">null</span>; / object 无效<br><span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Function</span>(); <span class="hljs-comment">// function 有效</span><br><span class="hljs-keyword">typeof</span> [] ; / object 无效<br><span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(); / object 无效<br><span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RegExp</span>(); / object 无效<br><span class="hljs-keyword">typeof</span> <span class="hljs-title class_">NaN</span>;  <span class="hljs-comment">// number Not a Number，表示非数字</span><br></code></pre></td></tr></table></figure>
+
+<p>二、<strong>instanceof</strong> 【检测是否是某个构造函数的实例】</p>
+<p><font color='orang'> 当我们需要知道某个对象的具体类型时，可以用运算符 <code>instanceof</code>，<code>instanceof</code> 操作符判断左操作数对象的原型链上是否有右边这个构造函数的 <code>prototype</code> 属性，也就是说指定对象是否是某个构造函数的实例，最后返回布尔值。</font></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//当 A 的 __proto__ 指向 B 的 prototype 时，就认为A就是B的实例</span><br><span class="hljs-keyword">instanceof</span> (A,B) = &#123;<br>    <span class="hljs-keyword">var</span> L = A.<span class="hljs-property">__proto__</span>; <span class="hljs-comment">// L是A的原型对象</span><br>    <span class="hljs-keyword">var</span> R = B.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>; <span class="hljs-comment">// R是B的原型对象</span><br>    <span class="hljs-keyword">if</span>(L === R) &#123;<br>        <span class="hljs-comment">// A的内部属性__proto__指向B的原型对象</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript">[] <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Array</span>; <span class="hljs-comment">// true</span><br>[] <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Object</span>; <span class="hljs-comment">// true</span><br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>() <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Date</span>; <span class="hljs-comment">// true</span><br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>() <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Object</span>; <span class="hljs-comment">// true</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params"></span>) &#123;&#125; <span class="hljs-comment">//创建 Person 构造函数</span><br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>() <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Person</span>; <span class="hljs-comment">// true</span><br><span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>() <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">Object</span>; <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>三、constructor</strong> 【得知某个实例对象，到底是哪一个构造函数产生的】</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//constructor 属性的作用是，可以得知某个实例对象，到底是哪一个构造函数产生的。</span><br><span class="hljs-keyword">var</span> f = <span class="hljs-keyword">new</span> <span class="hljs-title function_">F</span>();<br>f.<span class="hljs-property">constructor</span> === F;<span class="hljs-comment">// true</span><br><br>/但是 constructor 属性易变，不可信赖，这个主要体现在自定义对象上，当开发者重写 prototype 后，原有的 constructor 会丢失。<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">F</span>(<span class="hljs-params"></span>) &#123;&#125;<br>F.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span> = &#123;<br>	<span class="hljs-attr">_name</span>: <span class="hljs-string">&#x27;Eric&#x27;</span>,<br>&#125;;<br><span class="hljs-keyword">var</span> f = <span class="hljs-keyword">new</span> <span class="hljs-title function_">F</span>();<br>f.<span class="hljs-property">constructor</span> === F; <span class="hljs-comment">// false</span><br><span class="hljs-comment">//因此，为了规范，在重写对象原型时一般都需要重新给 constructor 赋值，以保证实例对象的类型不被改写。</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>四、<font color='orang'> Object.prototype.toString</font></strong> 【返回其调用者的具体类型 类型格式为<code>[object,xxx]</code>比较推荐】</p>
+<p>toString 是 Object 原型对象上的一个方法，该方法默认返回其调用者的具体类型，更严格的讲，是 toString 运行时 this 指向的对象类型，返回的类型格式为[object,xxx]，xxx 是具体的数据类型，其中包括：<br>String，Number，Boolean，Undefined，Null，Function，Date，Array，RegExp，Error，HTMLDocument，… 基本上所有对象的类型都可以通过这个方法获取到。</p>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-string">&quot;&quot;</span>); <span class="hljs-comment">// [object String]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-number">1</span>); <span class="hljs-comment">// [object Number]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-literal">true</span>); <span class="hljs-comment">// [object Boolean]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// [object Undefined]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-literal">null</span>); <span class="hljs-comment">// [object Null]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Function</span>()); <span class="hljs-comment">// [object Function]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>()); <span class="hljs-comment">// [object Date]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>([]); <span class="hljs-comment">// [object Array]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">RegExp</span>()); <span class="hljs-comment">// [object RegExp]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>()); <span class="hljs-comment">// [object Error]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-variable language_">document</span>); <span class="hljs-comment">// [object HTMLDocument]</span><br><span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(<span class="hljs-variable language_">window</span>); <span class="hljs-comment">//[object Window]</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a><strong>总结：</strong></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">typeof</span> 可以准确地判断出基本类型，但是对于引用类型除 <span class="hljs-keyword">function</span> 之外返回的都是 object；<br>已知是引用类型的情况可以选用 <span class="hljs-keyword">instanceof</span> 或 constructor 方法进行具体类型的判断：<br><span class="hljs-keyword">instanceof</span> 是基于原型链的；<br><span class="hljs-string">&#x27;constructor 属性易变，不可信赖，为了规范，在重写对象原型时一般都需要重新给 constructor 赋值，以保证实例对象的类型不被改写；</span><br><span class="hljs-string">//Object.prototype.toString.call() 通用但很繁琐。</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4、事件如何实现的？事件流？"><a href="#4、事件如何实现的？事件流？" class="headerlink" title="4、事件如何实现的？事件流？"></a>4、事件如何实现的？事件流？</h3><p><strong>事件：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//基于发布订阅模式，就是在浏览器加载的时候会读取事件相关的代码，但是只有实际等到具体的事件触发的时候才会执行。</span><br><span class="hljs-comment">//比如点击按钮，这是个事件（Event），而负责处理事件的代码段通常被称为事件处理程序（Event Handler），也就是「启动对话框的显示」这个动作。</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>在 Web 端，我们常见的就是 DOM 事件：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//DOM0 级事件，直接在 html 元素上绑定 on-event，比如 onclick，取消的话，dom.onclick = null，同一个事件只能有一个处理程序，后面的会覆盖前面的。</span><br><span class="hljs-comment">//DOM2 级事件，通过 addEventListener 注册事件，通过 removeEventListener 来删除事件，一个事件可以有多个事件处理程序，按顺序执行，捕获事件和冒泡事件。</span><br><span class="hljs-comment">//DOM3 级事件，增加了事件类型，比如 UI 事件，焦点事件，鼠标事件等。</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>事件流</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">事件流是网页元素接收事件的顺序，<span class="hljs-string">&quot;DOM2级事件&quot;</span>规定的事件流包括三个阶段：事件捕获阶段、处于目标阶段、事件冒泡阶段。<span class="hljs-string">&#x27;首先发生的事件捕获&#x27;</span>，为截获事件提供机会。  然后是实际的<span class="hljs-string">&#x27;目标接受事件&#x27;</span>。最后一个阶段是<span class="hljs-string">&#x27;事件冒泡阶段&#x27;</span>，可以在这个阶段对事件做出响应。虽然捕获阶段在规范中规定不允许响应事件，但是实际上还是会执行，所以有两次机会获取到目标对象。<br></code></pre></td></tr></table></figure>
+
+<h3 id="5、闭包"><a href="#5、闭包" class="headerlink" title="5、闭包"></a>5、闭包</h3><p>什么是闭包？ <font color='orang'>函数嵌套函数 能够读取其他函数内部变量的函数</font></p>
+<p>优点： 1、使用闭包是不会污染全局环境，2、方便进行模块化开发，3、可以在内存中维护一个变量</p>
+<p>缺点： 就是不恰当使用会造成内存泄漏 【解决方式：清除变量】</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//闭包原理：定义在一个函数内部的函数(函数嵌套函数)，闭包就是将函数内部和函数外部连接起来的一座桥梁。</span><br><span class="hljs-comment">//打破了作用域链的规则 闭包就是能够读取其他函数内部变量的函数</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>闭包应用场景</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//原生的setTimeout传递的第一个函数不能带参数</span><br><span class="hljs-built_in">setTimeout</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">param</span>) &#123;<br>  <span class="hljs-title function_">alert</span>(param);<br>&#125;, <span class="hljs-number">1000</span>);<br><span class="hljs-comment">//通过闭包可以实现传参效果</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">func</span>(<span class="hljs-params">param</span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-title function_">alert</span>(param);<br>  &#125;;<br>&#125;<br><span class="hljs-keyword">var</span> f1 = <span class="hljs-title function_">func</span>(<span class="hljs-number">1</span>);<br><span class="hljs-built_in">setTimeout</span>(f1, <span class="hljs-number">1000</span>); <span class="hljs-comment">// 1</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="5、call、apply、bind-的区别"><a href="#5、call、apply、bind-的区别" class="headerlink" title="5、call、apply、bind 的区别"></a>5、call、apply、bind 的区别</h3><p><strong>相同点：<code>call</code>、<code>apply</code>、<code>bind</code> 的共同点都是为了解决改变 <code>this</code> 的指向。作用都是相同的，只是传参的方式不同。</strong></p>
+<p><strong>不同点：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//call() 和 apply() 是立即执行的，而 bind() 是返回一个函数。</span><br>call() <span class="hljs-string">&#x27;可以传递多个参数&#x27;</span>，第一个参数和 apply() 一样，是用来替换的对象，后面是参数列表。<br>apply() <span class="hljs-string">&#x27;最多只能有两个参数&#x27;</span> —— 新<span class="hljs-built_in">this</span>对象和一个<span class="hljs-string">&#x27;参数数组或类数组 argArray&#x27;</span><br>bind() 和其他两个方法的作用也是一致的，只是该方法会返回一个函数，并且可以<span class="hljs-string">&#x27;通过bind() 实现柯里化&#x27;</span>。<br></code></pre></td></tr></table></figure>
+
+<h3 id="6、什么是-Promise？"><a href="#6、什么是-Promise？" class="headerlink" title="6、什么是 Promise？"></a>6、什么是 <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Promise&spm=1001.2101.3001.7020">Promise</a>？</h3><p><strong><code>Promise</code> 是目前 JS <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B&spm=1001.2101.3001.7020">异步编程</a>的一种解决方案</strong></p>
+<ul>
+<li>从语法上讲，<code>Promise</code> 是一个对象，从它可以获取异步操作的消息；</li>
+<li>从本意上讲，它是承诺，承诺它过一段时间会给你一个结果。</li>
+</ul>
+<h4 id="Promise-原理简析-："><a href="#Promise-原理简析-：" class="headerlink" title="Promise 原理简析 ："></a>Promise 原理简析 ：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-number">1</span>、<span class="hljs-title class_">Promise</span> 本身相当于一个状态机，拥有三种状态：<br><span class="hljs-string">&#x27;pending(等待态)</span><br><span class="hljs-string">&#x27;</span><span class="hljs-title function_">fulfiled</span>(成功态)<br><span class="hljs-string">&#x27;rejected(失败态)</span><br><span class="hljs-string">一个 Promise 对象初始化时的状态是 pending，调用了 resolve 后会将 Promise 的状态扭转为 fulfilled，调用 reject 后会将 Promise 的状态扭转为 rejected，这两种扭转一旦发生便不能再扭转该 Promise 到其他状态。</span><br><span class="hljs-string"></span><br><span class="hljs-string">2、Promise 对象原型上有一个 then 方法，then 方法会返回一个新的 Promise 对象，并且将回调函数 return&#x27;</span> 的结果作为该 <span class="hljs-title class_">Promise</span> resolve 的结果<span class="hljs-string">&#x27;，then 方法会在一个 Promise 状态被扭转为 fulfilled 或 rejected 时被调用。then 方法的&#x27;</span>参数为两个函数<span class="hljs-string">&#x27;，分别为 Promise 对象的状态被扭转为 fulfilled 和 rejected 对应的回调函数。</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>Promise 使用</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//构造一个 Promise 对象，并将要执行的异步函数传入到 Promise 的参数中执行，并且在异步执行结束后调用 resolve() 函数，就可以在 Promise 的 then 方法中获取到异步函数的执行结果</span><br><span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>():<span class="hljs-title class_">Promise</span>.<span class="hljs-property">resolve</span> 返回一个 fulfilled 状态的 <span class="hljs-title class_">Promise</span><br><span class="hljs-string">&#x27;Promise.all([p1,pa,p3,...])</span><br><span class="hljs-string">//Promise.all 接收一个 Promise 对象数组作为参数，只有全部的 Promise 都已经变为 fulfilled 状态后才会继续后面的处理。Promise.all 本身返回的也是一个 Promise;</span><br><span class="hljs-string">&#x27;</span><span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">race</span>([p1,p1,p3,...])<br><span class="hljs-comment">//Promise.race 和 Promise.all 类似，只不过这个函数会在 Promise 中第一个 promise 的状态扭转后就开始后面的处理（fulfilled、rejected 均可）</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="7、js-脚本加载问题，async、defer"><a href="#7、js-脚本加载问题，async、defer" class="headerlink" title="7、js 脚本加载问题，async、defer"></a>7、js 脚本加载问题，async、defer</h3><ul>
+<li><p><strong>正常加载模式</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//这种情况下 JS 会阻塞浏览器，浏览器必须等待前面所有的 js 加载和执行完毕才能去做其它事情</span><br>&lt;script src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;&lt;/script&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p><strong>async(异步) 模式</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//async 模式下，JS 不会阻塞浏览器做任何其它的事情。它的加载是异步的，当它加载结束，JS 脚本会立即执行</span><br>&lt;script <span class="hljs-keyword">async</span> src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;&lt;/script&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p><strong>defer(延缓) 模式</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//defer 模式下，JS 的加载是异步的，执行是被推迟的。等整个文档解析完成、DOMContentLoaded 事件即将被触发时，被标记了 defer 的 JS 文件才会开始依次执行。</span><br>&lt;script defer src=<span class="hljs-string">&quot;index.js&quot;</span>&gt;&lt;/script&gt;<br></code></pre></td></tr></table></figure></li>
+<li><p><strong>总结</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//从应用的角度来说，一般当我们的脚本与 DOM 元素和其它脚本之间的依赖关系不强时，我们会选用 async；</span><br><span class="hljs-comment">//当脚本依赖于 DOM 元素和其它脚本的执行结果时，我们会选用 defer。</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="8、获取-url-的-search-部分-【obj-new-URL-str-obj2-new-URLSearchParams-str2-】"><a href="#8、获取-url-的-search-部分-【obj-new-URL-str-obj2-new-URLSearchParams-str2-】" class="headerlink" title="8、获取 url 的 search 部分 【obj = new URL(str) obj2 = new URLSearchParams(str2)】"></a>8、获取 url 的 search 部分 【obj = new URL(str) obj2 = new URLSearchParams(str2)】</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">const</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span><br>  <span class="hljs-string">&quot;https://huodong.taobao.com/wow/a/act/tao/dailyact/4634/wupr?spm=a21bo.jianhua.201867-main.1.5af911d97F6TPV&amp;wh_pid=dailyAct-257518&quot;</span>;<br><span class="hljs-type">const</span> <span class="hljs-variable">obj</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">URL</span>(str);<br>console.log(obj.searchParams.get(<span class="hljs-string">&quot;wh_pid&quot;</span>));<br><br><span class="hljs-type">const</span> <span class="hljs-variable">str2</span> <span class="hljs-operator">=</span><br>  <span class="hljs-string">&quot;?spm=a21bo.jianhua.201867-main.1.5af911d97F6TPV&amp;wh_pid=dailyAct-257518&quot;</span>;<br><span class="hljs-type">const</span> <span class="hljs-variable">obj2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">URLSearchParams</span>(str2);<br>console.log(obj2.get(<span class="hljs-string">&quot;wh_pid&quot;</span>));<br><br><span class="hljs-type">const</span> <span class="hljs-variable">obj3</span> <span class="hljs-operator">=</span> &#123;<br>  a: <span class="hljs-number">3</span>,<br>  b: <span class="hljs-number">4</span>,<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>前端学习笔记</div>
+      <div>http://example.com/2022/08/29/面试题总结/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月29日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/08/29/ES6%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B0%E5%A2%9E/" title="ES6新增">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ES6新增</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/08/29/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
