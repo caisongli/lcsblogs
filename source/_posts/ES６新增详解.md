@@ -1,5 +1,11 @@
 ---
 title: ES6新增详解
+categories:
+  - web前端
+tags:
+  - ES6笔记
+index_img: /img2/10001.jpeg
+banner_img: /img2/10001.jpeg
 ---
 
 # ES6 新增详解

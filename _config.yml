@@ -7,7 +7,7 @@ title: "郦先森"
 subtitle: ""
 description: ""
 keywords:
-author: John Doe
+author: 小小小熊猫
 language: zh-CN
 timezone: ""
 
@@ -29,6 +29,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+    - "example/**"   
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -55,6 +56,10 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ""
+
+# 音乐
+aplayer:
+  meting: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -98,6 +103,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: fluid
+# theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -106,3 +112,42 @@ deploy:
   type: git
   repository: https://github.com/caisongli/caisongli.github.io.git #你的仓库地址
   branch: main
+# 模型
+live2d:
+	enable: true
+	scriptFrom: local
+	model: 
+		use: live2d-widget-model-haruto #模型选择
+	display: 
+		position: right  #模型位置
+		width: 300       #模型宽度
+		height: 600      #模型高度
+	mobile: 
+		show: false      #是否在手机端显示
+# 优化
+# hexo-neat
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js' 
+    - '**/love.js'
+    - '**/xuehua.js'
+
+# 跳过文件夹下所有子文件夹和文件

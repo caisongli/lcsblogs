@@ -1,5 +1,11 @@
 ---
 title: ES6新增
+categories:
+  - web前端
+tags:
+  - ES6笔记
+index_img: /img2/10000.jpg
+banner_img: /img2/10000.jpg
 ---
 
 # ES6 有哪些新增
