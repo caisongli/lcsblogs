@@ -279,6 +279,11 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
+
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/arr-diff/-/arr-diff-2.0.0.tgz"
@@ -1789,6 +1794,11 @@ fast-diff@^1.2.0:
   resolved "https://registry.npmmirror.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
   integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
 
+fast-equals@^3.0.1:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/fast-equals/-/fast-equals-3.0.3.tgz#8e6cb4e51ca1018d87dd41982ef92758b3e4197f"
+  integrity sha512-NCe8qxnZFARSHGztGMZOO/PC1qa5MIFB5Hp66WdzbCRAz8U8US3bx1UTgLS49efBQPcUtO9gf5oVEY8o7y/7Kg==
+
 fast-glob@^3.2.7:
   version "3.2.12"
   resolved "https://registry.npmmirror.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
@@ -2472,9 +2482,9 @@ hexo-bunyan@^1.0.0:
     mv "~2"
     safe-json-stringify "~1"
 
-hexo-cli@^4.0.0:
+hexo-cli@^4.3.0:
   version "4.3.0"
-  resolved "https://registry.npmmirror.com/hexo-cli/-/hexo-cli-4.3.0.tgz"
+  resolved "https://registry.yarnpkg.com/hexo-cli/-/hexo-cli-4.3.0.tgz#4bb2bf11a30fae601f2f53ac0cb833fee3187649"
   integrity sha512-lr46h1tK1RNQJAQZbzKYAWGsmqF5DLrW6xKEakqv/o9JqgdeempBjIm7HqjcZEUBpWij4EO65X6YJiDmT9LR7g==
   dependencies:
     abbrev "^1.1.1"
@@ -2500,12 +2510,12 @@ hexo-deployer-git@^3.0.0:
     moment "^2.18.0"
     nunjucks "^3.2.1"
 
-hexo-front-matter@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmmirror.com/hexo-front-matter/-/hexo-front-matter-2.0.0.tgz"
-  integrity sha512-IR3tjAyK2Ga/0a/WDAoNy5+n3ju2/mkuAsCDEeGgGLf5+7kkiOkkG/FrnueuYgz0h2MPfWDLBiDsSTCmB0sLCA==
+hexo-front-matter@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hexo-front-matter/-/hexo-front-matter-3.0.0.tgz#b9a473c6cb910c73f9fea49f506e98540fcea6cb"
+  integrity sha512-hSQTPUmB/BCe1BFYmXRkPyLk8rqbBqHCQq+rjwwOJuEfOADrFaVK2VPZb90tJzPyXE1xSxpgCxE/AZq0CyTVwg==
   dependencies:
-    js-yaml "^3.13.1"
+    js-yaml "^4.1.0"
 
 hexo-fs@^0.2.0, hexo-fs@^0.2.2:
   version "0.2.3"
@@ -2603,9 +2613,9 @@ hexo-log@^2.0.0:
   dependencies:
     chalk "^4.0.0"
 
-hexo-log@^3.0.0:
+hexo-log@^3.0.0, hexo-log@^3.2.0:
   version "3.2.0"
-  resolved "https://registry.npmmirror.com/hexo-log/-/hexo-log-3.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/hexo-log/-/hexo-log-3.2.0.tgz#958c8ea681f7575afcd554f39c8e09f46461d317"
   integrity sha512-fk7jOW3hvKiAv4Q/d8UxaQlARwcv+5KjGcnxexUrqBqyWbMCLmw7jhMHTSRLNNQpaoTlF5ff+kQkPi4yhp9iag==
   dependencies:
     picocolors "^1.0.0"
@@ -2720,7 +2730,7 @@ hexo-util@^0.6.2:
     html-entities "^1.2.0"
     striptags "^2.1.1"
 
-hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.4.0, hexo-util@^2.5.0:
+hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.5.0, hexo-util@^2.7.0:
   version "2.7.0"
   resolved "https://registry.npmmirror.com/hexo-util/-/hexo-util-2.7.0.tgz"
   integrity sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==
@@ -2734,33 +2744,35 @@ hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.4.0, hexo-util@^2.5.0:
     prismjs "^1.17.1"
     strip-indent "^3.0.0"
 
-hexo@^5.0.0:
-  version "5.4.2"
-  resolved "https://registry.npmmirror.com/hexo/-/hexo-5.4.2.tgz"
-  integrity sha512-Af6mxKwx9byalaffKgiQ8/bZfbXPo2SGEn2Q9hFh++15g15/IulvOhu8lQkJdyZNzmj3hOuSrJdqoUvIr3K/qw==
+hexo@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/hexo/-/hexo-6.3.0.tgz#10c940aaf86e2fbaf8a0db7cb79fc1fe4d6e1180"
+  integrity sha512-4Jq+rWd8sYvR1YdIQyndN/9WboQ/Mqm6eax8CjrjO+ePFm2oMVafSOx9WEyJ42wcLOHjfyMfnlQhnUuNmJIpPg==
   dependencies:
     abbrev "^1.1.1"
     archy "^1.0.0"
-    bluebird "^3.5.2"
-    chalk "^4.0.0"
-    hexo-cli "^4.0.0"
-    hexo-front-matter "^2.0.0"
+    bluebird "^3.7.2"
+    hexo-cli "^4.3.0"
+    hexo-front-matter "^3.0.0"
     hexo-fs "^3.1.0"
     hexo-i18n "^1.0.0"
-    hexo-log "^2.0.0"
-    hexo-util "^2.4.0"
-    js-yaml "^3.14.1"
-    micromatch "^4.0.2"
-    moment "^2.22.2"
-    moment-timezone "^0.5.21"
-    nunjucks "^3.2.1"
+    hexo-log "^3.2.0"
+    hexo-util "^2.7.0"
+    js-yaml "^4.1.0"
+    js-yaml-js-types "^1.0.0"
+    micromatch "^4.0.4"
+    moize "^6.1.0"
+    moment "^2.29.1"
+    moment-timezone "^0.5.34"
+    nunjucks "^3.2.3"
+    picocolors "^1.0.0"
     pretty-hrtime "^1.0.3"
-    resolve "^1.8.1"
+    resolve "^1.22.0"
     strip-ansi "^6.0.0"
     text-table "^0.2.0"
     tildify "^2.0.0"
-    titlecase "^1.1.2"
-    warehouse "^4.0.0"
+    titlecase "^1.1.3"
+    warehouse "^4.0.2"
 
 highlight.js@^11.0.1:
   version "11.6.0"
@@ -3423,13 +3435,27 @@ jquery@^3.5.1:
   resolved "https://registry.npmmirror.com/jquery/-/jquery-3.6.1.tgz#fab0408f8b45fc19f956205773b62b292c147a16"
   integrity sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==
 
-js-yaml@^3.12.0, js-yaml@^3.13.1, js-yaml@^3.14.1:
+js-yaml-js-types@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/js-yaml-js-types/-/js-yaml-js-types-1.0.1.tgz#fa57135b99d67b3612718426af2d9b314e5c6808"
+  integrity sha512-5tpfyORs8OQ43alNERbWfYRCtWgykvzYgY46fUhrQi2+kS7N0NuuFYLZ/IrfmVm5muLTndeMublgraXiFRjEPw==
+  dependencies:
+    esprima "^4.0.1"
+
+js-yaml@^3.12.0:
   version "3.14.1"
   resolved "https://registry.npmmirror.com/js-yaml/-/js-yaml-3.14.1.tgz"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
+
+js-yaml@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
+  integrity sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==
+  dependencies:
+    argparse "^2.0.1"
 
 jsdom@^16.7.0:
   version "16.7.0"
@@ -3827,6 +3853,11 @@ meting@^1.2.0:
   resolved "https://registry.npmjs.org/meting/-/meting-1.2.0.tgz"
   integrity sha512-cbLMWG6Smx1X8IoBvsk0lf2ZkYdWKF07Lsq5AyoNZFLKxge+ZslQSRWn3JCihIqW1Uwr8AZ+i/w8wQznuBJUOQ==
 
+micro-memoize@^4.0.11:
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/micro-memoize/-/micro-memoize-4.0.14.tgz#d1239ce2e5831125ac518509f5a23b54e7ca3e17"
+  integrity sha512-2tzWP1w2Hh+r7kCYa4f//jpBEA6dAueiuLco38NxfjF9Py3KCCI7wVOTdCvOhmTC043t+ulclVBdl3v+s+UJIQ==
+
 micromatch@^2.1.5:
   version "2.3.11"
   resolved "https://registry.npmjs.org/micromatch/-/micromatch-2.3.11.tgz"
@@ -3865,7 +3896,7 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-micromatch@^4.0.2, micromatch@^4.0.4:
+micromatch@^4.0.4:
   version "4.0.5"
   resolved "https://registry.npmmirror.com/micromatch/-/micromatch-4.0.5.tgz"
   integrity sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==
@@ -3978,14 +4009,22 @@ mkdirp@^0.5.1, mkdirp@^0.5.5, mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.6"
 
-moment-timezone@^0.5.21:
-  version "0.5.37"
-  resolved "https://registry.npmmirror.com/moment-timezone/-/moment-timezone-0.5.37.tgz"
-  integrity sha512-uEDzDNFhfaywRl+vwXxffjjq1q0Vzr+fcQpQ1bU0kbzorfS7zVtZnCnGc8mhWmF39d4g4YriF6kwA75mJKE/Zg==
+moize@^6.1.0:
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/moize/-/moize-6.1.4.tgz#8e79b62a4a0519229b013522ae27d1b00c0b0c2d"
+  integrity sha512-Ga8V0iu7XHDz6GR50pAaGjc3hJ5CVmWUgQRyWFAn4pYrBzITx9dMlXOGhURP2qmO3WTeOC9Yu17MlFV6PY2m/g==
+  dependencies:
+    fast-equals "^3.0.1"
+    micro-memoize "^4.0.11"
+
+moment-timezone@^0.5.34:
+  version "0.5.40"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.40.tgz#c148f5149fd91dd3e29bf481abc8830ecba16b89"
+  integrity sha512-tWfmNkRYmBkPJz5mr9GVDn9vRlVZOTe6yqY92rFxiOdWXbjaR0+9LwQnZGGuNR63X456NqmEkbskte8tWL5ePg==
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.10.6, moment@^2.18.0, moment@^2.22.2:
+"moment@>= 2.9.0", moment@^2.10.6, moment@^2.18.0, moment@^2.29.1:
   version "2.29.4"
   resolved "https://registry.npmmirror.com/moment/-/moment-2.29.4.tgz"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
@@ -4288,7 +4327,7 @@ nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
-nunjucks@^3.2.1:
+nunjucks@^3.2.1, nunjucks@^3.2.3:
   version "3.2.3"
   resolved "https://registry.npmmirror.com/nunjucks/-/nunjucks-3.2.3.tgz"
   integrity sha512-psb6xjLj47+fE76JdZwskvwG4MYsQKXUtMsPh6U0YMvmyjRtKRFcxnlXGWglNybtNTNVmGdp94K62/+NjF5FDQ==
@@ -5133,7 +5172,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.npmjs.org/resolve-url/-/resolve-url-0.2.1.tgz"
   integrity sha512-ZuF55hVUQaaczgOIwqWzkEcEidmlD/xl44x1UZnhOXcYuFN2S6+rcxpG+C1N3So0wvNI3DmJICUFfu2SxhBmvg==
 
-resolve@^1.10.0, resolve@^1.11.0, resolve@^1.8.1:
+resolve@^1.10.0, resolve@^1.11.0, resolve@^1.22.0:
   version "1.22.1"
   resolved "https://registry.npmmirror.com/resolve/-/resolve-1.22.1.tgz"
   integrity sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==
@@ -5907,9 +5946,9 @@ timsort@^0.3.0:
   resolved "https://registry.npmmirror.com/timsort/-/timsort-0.3.0.tgz"
   integrity sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A==
 
-titlecase@^1.1.2:
+titlecase@^1.1.3:
   version "1.1.3"
-  resolved "https://registry.npmmirror.com/titlecase/-/titlecase-1.1.3.tgz"
+  resolved "https://registry.yarnpkg.com/titlecase/-/titlecase-1.1.3.tgz#fc6d65ff582b0602410768ef1a09b70506313dc3"
   integrity sha512-pQX4oiemzjBEELPqgK4WE+q0yhAqjp/yzusGtlSJsOuiDys0RQxggepYmo0BuegIDppYS3b3cpdegRwkpyN3hw==
 
 tmp@^0.0.33:
@@ -6246,9 +6285,9 @@ w3c-xmlserializer@^2.0.0:
   dependencies:
     xml-name-validator "^3.0.0"
 
-warehouse@^4.0.0:
+warehouse@^4.0.2:
   version "4.0.2"
-  resolved "https://registry.npmmirror.com/warehouse/-/warehouse-4.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/warehouse/-/warehouse-4.0.2.tgz#5ea59381c59e2187bcd77d25d8a628b1e1ffc53d"
   integrity sha512-GixS7SolBGu81rnxYM6bScxdElLM97Jx/kr0a6B6PGBWFqvHeuWFj7QbgEX1YWZSxiJt/aR6dBVQKC/PvvihdQ==
   dependencies:
     bluebird "^3.2.2"
